@@ -14,7 +14,7 @@ static void verificarAcerto(std::string palavraSecreta, int vidas) {
         bool palpiteCerto{ false };
         
         // Verifica letra acertada
-        for (char i{ 0 }; i < palavraSecreta.size(); i++) {
+        for (size_t i{ 0 }; i < palavraSecreta.length(); i++) {
             if (std::find(chutes.begin(), chutes.end(), palavraSecreta[i]) != chutes.end()) {
                 std::cout << palavraSecreta[i] << " ";
                 if (palpite == palavraSecreta[i]) {
